@@ -1,0 +1,17 @@
+# project + installment tracker.py 
+# Author: KAESHA C. PABUAYA
+# Laboratory Activity 1 in Advanced Programming
+
+print("=" * 40)
+print("            EXPENSE TRACKER")
+print("       Know where your money goes.")
+print("=" * 40)
+print("\nWelcome! This is your personal expense tracker.\n")
+print("MAIN MENU")
+print(" [1] Add an expense         (coming soon)")
+print(" [2] View all expenses      (coming soon)")
+print(" [3] Show total spent       (coming soon)")
+print(" [4] Exit                   (coming soon)\n")
+print("-" * 40)
+print("Made by: Kaesha C. Pabuaya | Installment 1")
+print("=" * 40)
