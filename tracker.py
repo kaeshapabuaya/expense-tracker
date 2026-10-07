@@ -1,6 +1,7 @@
 # project + installment tracker.py 
 # Author: KAESHA C. PABUAYA
-# Laboratory Activity 2 in Advanced Programming
+# Laboratory Activity 3 in Advanced Programming
+
 print("=" * 40)
 print("            EXPENSE TRACKER")
 print("       Know where your money goes.")
@@ -19,17 +20,27 @@ item1 = input("First expense? ")
 amt1 = float(input("Amount? "))
 item2 = input("Second expense? ")
 amt2 = float(input("Amount? "))
+taxper = float(input("Tax rate %? "))
+budget = float(input("Your budget? "))
 print("")
 
 total = amt1 + amt2
 ave = total / 2
+tax = total * taxper / 100
+gtotal = total + tax
+obudget = budget < gtotal
+budgetrem = budget - gtotal
 
 print("-" * 40)
 print("SUMMARY")
-print(" - " + item1 + ": \t$" , amt1)
-print(" - " + item2 + ": \t$" , amt2)
-print("Total Spent: \t$" , total)
-print("Average:      \t$" , ave)
-
+print(" - " + item1 + ": \t\t$" , amt1)
+print(" - " + item2 + ": \t\t$" , amt2)
+print("Total Spent: \t\t$" , total)
+print("Average:      \t\t$" , ave)
+print("Tax (" , taxper , ")     \t$" , tax)
+print("Grand total:      \t$" , gtotal)
+print("Over Budget?       \t$" , obudget)
+print("Left in budget:      \t$" , budgetrem)
 print("-" * 40)
-print("Made by: Kaesha C. Pabuaya | Installment 2\n")
+
+print("Made by: Kaesha C. Pabuaya | Installment 3\n")
