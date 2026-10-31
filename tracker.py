@@ -1,6 +1,6 @@
 # project + installment tracker.py 
 # Author: KAESHA C. PABUAYA
-# Laboratory Activity 3 in Advanced Programming
+# Laboratory Activity 4 in Advanced Programming
 
 print("=" * 40)
 print("            EXPENSE TRACKER")
@@ -18,8 +18,28 @@ print("Welcome, " + name + "! Let's log two expenses.\n" )
 
 item1 = input("First expense? ")
 amt1 = float(input("Amount? "))
+
+if amt1 > 200:
+    print(" Huge expense - are you sure?")
+elif amt1 > 100:
+    print(" Big expense.")
+elif amt1 > 50:
+    print(" Moderate expense.")
+else:
+    print(" Small expense.")
+    
 item2 = input("Second expense? ")
 amt2 = float(input("Amount? "))
+
+if amt2 > 200:
+    print(" Huge expense - are you sure?")
+elif amt2 > 100:
+    print(" Big expense.")
+elif amt2 > 50:
+    print(" Moderate expense.")
+else:
+    print(" Small expense.")
+    
 taxper = float(input("Tax rate %? "))
 budget = float(input("Your budget? "))
 print("")
@@ -28,7 +48,7 @@ total = amt1 + amt2
 ave = total / 2
 tax = total * taxper / 100
 gtotal = total + tax
-obudget = budget < gtotal
+obudget = gtotal > budget
 budgetrem = budget - gtotal
 
 print("-" * 40)
@@ -39,8 +59,13 @@ print("Total Spent: \t\t$" , total)
 print("Average:      \t\t$" , ave)
 print("Tax (" , taxper , ")     \t$" , tax)
 print("Grand total:      \t$" , gtotal)
-print("Over Budget?       \t$" , obudget)
-print("Left in budget:      \t$" , budgetrem)
+
+if obudget:
+    print("Over budget by      \t$" , budgetrem , "!")
+elif gtotal > budget * 0.90:
+    print("Careful: only      \t$" , budgetrem , "left")
+else:
+    print("Within budget.      \t$" , budgetrem , "left")
 print("-" * 40)
 
-print("Made by: Kaesha C. Pabuaya | Installment 3\n")
+print("Made by: Kaesha C. Pabuaya | Installment 4\n")
